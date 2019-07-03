@@ -63,7 +63,7 @@ console.log(trainFreq);
 //Time to be entered on entry form
 var firstTime = 0;
 
-var firstTimeConvert = moment(firstTime, "HH:mm").subtract(1, "years");
+var firstTimeConvert = moment(firstTime,"HH:mm").subtract(1, "years");
     console.log(firstTimeConvert);
 
 //Current time
@@ -83,7 +83,7 @@ var minTilTrain = trainFreq - timeRemain;
     console.log("Minutes away: " + minTilTrain);
 
 //Next arrival
-var nextTrain = moment().add(minTilTrain, "minutes");
+var nextTrain = moment().add(minTilTrain, "minutes").format("HH:mm");
     console.log("Arrival Time: " + moment(nextTrain).format("HH:mm"));
 
 //Create new rows
